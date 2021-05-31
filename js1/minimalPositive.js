@@ -23,4 +23,4 @@ function minimalPositive(array, i = 0) {
   return minimalPositive(array, (i += 1));
 }
 
-console.log(minimalPositive([-5, -9, -111, -1000, -7]));
+console.log(minimalPositive([56, -9, 87, -23, 0, -105, 55, 1]));
