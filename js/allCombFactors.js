@@ -2,7 +2,7 @@
 // Write a program to print all the combinations of factors of given number n.
 
 function allCombFactors(number, i = 2, currP = 1, arr = []) {
-  console.log(arr, "arr");
+  //   console.log(arr, "arr"); // to look up *********************
   if (i > number || currP > number) {
     return;
   }
@@ -14,7 +14,7 @@ function allCombFactors(number, i = 2, currP = 1, arr = []) {
     if (number % k === 0) {
       arr.push(k);
       allCombFactors(number, k, currP * k, arr);
-      console.log("pop");
+      //   console.log("pop"); // to look up ************************
       arr.pop();
     }
   }
