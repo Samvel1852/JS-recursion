@@ -23,4 +23,4 @@ function addBrackets(str, res = "", i = 0) {
   return addBrackets(str, res, (i += 1));
 }
 
-console.log(addBrackets("Y"));
+console.log(addBrackets("Yerevan"));

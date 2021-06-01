@@ -2,13 +2,9 @@
 // * Given an array of integers, print sums of all subsets in it. Output sums can be printed in any order.
 
 function arrayOfSum(array, n = 2 ** array.length, arr = [0, ...array]) {
-  if (n === 0) {
-    return arr;
-  }
-  console.log(arr);
-  let [first, ...rest] = array;
-
-  return first + arrayOfSum(rest, (n -= 1));
+  let center = Math.floor(array.length / 2);
+  let left = array.slice(0, center);
+  let right = array.slice(center);
 }
 
-console.log(arrayOfSum([1, 2, 3, 4]));
+console.log(arrayOfSum([1, 2, 3, 4, 5, 6]));
