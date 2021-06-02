@@ -25,30 +25,27 @@ for (let array of arrayMap.values()) {
   console.log(array);
 }
 
-class aMap extends Map {
+class aMap {
   constructor(array) {
-    super();
-    // this.array = Object.fromEntries(array);
+    this.array = Object.fromEntries(array);
   }
 
-  aSet(key, value) {
-    this.set(key, value);
-  }
+  //   aSet(key, value) {
+
+  //   }
 
   toString() {
-    return `${this.array}`;
+    return JSON.stringify(this.array);
   }
 }
 
 let tempArr = [
-  [1, 2],
+  [{ s: 2 }, 2],
   [3, 4],
 ];
 
-let newMap = new aMap([
-  [1, 2],
-  [3, 4],
-]);
-newMap.aSet("vaspur", 1);
-newMap.aSet({ l: 4, 2: 0 }, 7);
+let newMap = new aMap(tempArr);
+console.log(newMap);
+// newMap.aSet("vaspur", 1);
+// newMap.aSet({ l: 4, 2: 0 }, 7);
 console.log(newMap);
