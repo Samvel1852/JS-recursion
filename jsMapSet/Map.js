@@ -27,25 +27,29 @@ for (let array of arrayMap.values()) {
 
 class aMap {
   constructor(array) {
-    this.array = Object.fromEntries(array);
+    // this.array = Object.fromEntries(array);
   }
 
-  //   aSet(key, value) {
-
-  //   }
+  aSet(key, value) {
+    this[Number(key)] = value;
+  }
 
   toString() {
-    return JSON.stringify(this.array);
+    return this.array;
   }
 }
 
 let tempArr = [
-  [{ s: 2 }, 2],
+  [true, 2],
   [3, 4],
 ];
 
-let newMap = new aMap(tempArr);
+let newMap = new aMap();
 console.log(newMap);
-// newMap.aSet("vaspur", 1);
+newMap.aSet(1, 1);
+newMap.aSet(2, 2);
 // newMap.aSet({ l: 4, 2: 0 }, 7);
 console.log(newMap);
+
+let xMap = new Map([[{ 1: 2 }, 12]]);
+console.log(xMap);
