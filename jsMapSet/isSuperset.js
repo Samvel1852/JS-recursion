@@ -2,7 +2,7 @@ let setA = new Set([1, 2, 3, 4]);
 let setB = new Set([2, 3]);
 let setC = new Set([3, 4, 5, 6]);
 
-const isSuperset = (setA, setB) => {
+const union = (setA, setB) => {
   let newSetA = Array.from(setA);
   let newSetB = Array.from(setB);
   //   console.log(newSetA, newSetB);
@@ -11,4 +11,4 @@ const isSuperset = (setA, setB) => {
   return resArr;
 };
 
-console.log(isSuperset(setA, setC));
+console.log(union(setA, setC));
